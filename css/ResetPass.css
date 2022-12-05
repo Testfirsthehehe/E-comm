@@ -1,0 +1,155 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+/* Color Variables */
+:root {
+  --white: #fff;
+  --black: #222;
+  --green: #6cbe02;
+  --grey1: #f0f0f0;
+  --grey2: #e9d7d3;
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black)
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.d-flex {
+  display: flex; 
+  align-items: center;
+}
+/* resetpass Form */
+.ResetPass-form {
+  padding: 5rem 0;
+  max-width: 50rem;
+  margin: 5rem auto;
+}
+
+.ResetPass-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+.ResetPass-form form h1 {
+  margin-bottom: 1rem;
+}
+.ResetPass-form form p {
+  margin-bottom: 2rem;
+}
+
+.ResetPass-form form label {
+  margin-bottom: 1rem;
+}
+
+.ResetPass-form form .email-password {
+  width: 400px;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 1.5rem 0;
+  text-indent: 1rem;
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  overflow:hidden;
+}
+
+.ResetPass-form form input::placeholder {
+  font-size: 1.6rem;
+  color: #222;
+}
+
+.ResetPass-form form .ForgetButtons {
+  margin-top: 1rem;
+}
+
+.ResetPass-form form button {
+  width: 100%;
+  border-radius: 100px;
+  outline: none;
+  border: none;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  margin-right: 1.5rem;
+  background-color: var(--green);
+  color: white;
+  cursor: pointer;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+}
+
+.ResetPass-form form button:hover {
+  opacity: 0.7;
+}
+
+.resettgif .resetttgif{
+  width: 270px;
+  height: 210px;
+}
+
+.ResetPass-form .password{
+  text-align: center;
+  margin-right: 10px;
+}
+
+.ResetPass-form p{
+  text-align: center;
+}
+
+.ResetPass-form form p a {
+  color: dodgerblue;
+}
+.ResetPass-form a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .ForgetPass-form form .email-password {
+    width: 26rem;
+    border: 0.0625rem solid #ccc;
+    outline: none;
+    padding: 1.5rem 0;
+    text-indent: 1rem;
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+    border-radius: 0.5rem;
+  }
+  
+}
+

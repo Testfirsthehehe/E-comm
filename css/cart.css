@@ -1,0 +1,415 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap');
+
+/* Color Variables */
+:root {
+  --white: #fff;
+  --black: #222;
+  --green: #6cbe02;
+  --grey1: #f0f0f0;
+  --grey2: #e9d7d3;
+  /*
+  --green: #6cbe02;
+  --green2: #27ae60;*/
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'roboto', sans-serif;;
+  font-size: 1.6rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black)
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.checkout-container {
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.checkout-quantity {
+  color: var(--green);
+  float: left;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+
+.d-flex {
+  display: flex; 
+  align-items: center;
+}
+
+/* Cart Items */
+.cart {
+  margin: 5rem auto;
+}
+
+table {
+  border-top: 3px solid var(--green);
+  border-bottom: 3px solid var(--green);
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.cart-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.cart-delete {
+  color: white;
+  background-color: #ff2323;
+  border: 2px solid #ff2323;
+  border-radius: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.cart-delete:hover {
+  color: #ff2323;
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+}
+
+.cart-delete:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(1px);
+}
+
+.cart-add {
+  color: white;
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  border-radius: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.cart-add:hover {
+  color: var(--green);
+  background-color: var(--white);
+  transition: all 0.25s ease-in;
+}
+
+.cart-add:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(1px);
+}
+
+.cart-reduce {
+  color: white;
+  background-color: #ff2323;
+  border: 2px solid #ff2323;
+  border-radius: .2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+}
+
+.cart-reduce:hover {
+  color: #ff2323;
+  background-color: var(--white);
+  transition: all 0.15s ease-in;
+}
+
+.cart-reduce:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(1px);
+}
+
+
+
+
+
+
+th {
+  text-align: left;
+  padding: 0.5rem;
+  color: #fff;
+  background-color: var(--green);
+  font-weight: normal;
+}
+
+td {
+  padding: 1rem 0.5rem;
+}
+
+td input {
+  width: 5rem;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+td a {
+  color: orangered;
+  font-size: 1.4rem;
+}
+
+td img {
+  width: 8rem;
+  height: 8rem;
+  margin-right: 1rem;
+}
+
+.total-price {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  
+}
+
+.final-price {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.total-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.total-price table {
+  width: 100%;
+  max-width: 35rem;
+}
+
+td:last-child {
+  text-align: right;
+}
+
+th:last-child {
+  text-align: right;
+}
+
+.checkout {
+  display: inline-block;
+  background-color: var(--green);
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: .2em;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.checkout:hover {
+  color: var(--green);
+  background-color: var(--white);
+  box-shadow: 0px 0px 0px 1px var(--green) inset;
+  transition: all 0.25s ease-in;
+}
+
+.checkout:active {
+  box-shadow: 0 0px #666;
+  transform: translateY(2px);
+  transition: none;
+  box-shadow: 0px 0px 0px 1px var(--green) inset;
+}
+
+
+
+@media only screen and (max-width: 567px) {
+  .cart-info p {
+    padding: 0%;
+    display: none;
+  }
+}
+/*responsive*/
+
+/*checkout*/
+
+.modal {
+  text-transform: capitalize;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow:auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe00;
+  margin: auto; /* 15% from the top and centered */
+  padding: 20px;
+  width: 100%; /* Could be more or less, depending on screen size */
+}
+
+
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+.contain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding:25px;
+  min-height: 100vh;
+  background: #fefefe00;
+}
+
+.contain:active {
+  visibility: visible;
+  z-index: 200;
+  opacity: 1;
+   top: 50%; /*slide it down smoothly*/
+}
+.contain:active ~ #overlay {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+.contain form{
+  border-radius: .5em;
+  padding:20px;
+  width:1000px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
+  top: -50%;
+  transition: all .5s ease-in-out; /*make it smooth*/
+}
+
+.contain form .row{
+  display: flex;
+  flex-wrap: wrap;
+  gap:15px;
+}
+
+.contain form .row .col{
+  flex:1 1 250px;
+}
+
+.contain form .row .col .title{
+  font-size: 20px;
+  color:#333;
+  padding-bottom: 5px;
+  text-transform: uppercase;
+}
+
+.container-title {
+  font-size: 20px;
+  color:#333;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.container-sub-title {
+  font-size: 16px;
+  color:rgba(51, 51, 51, 0.755);
+  text-transform:none;
+  text-align: center;
+}
+
+.contain form .row .col .inputBox{
+  margin:15px 0;
+}
+
+.contain form .row .col .inputBox span{
+  margin-bottom: 10px;
+  display: block;
+}
+
+.contain form .row .col .inputBox input{
+  width: 100%;
+  border:1px solid #ccc;
+  padding:10px 15px;
+  font-size: 15px;
+  text-transform: none;
+}
+
+.contain form .row .col .inputBox input:focus{
+  border:1px solid #000;
+}
+
+.contain form .row .col .flex{
+  display: flex;
+  gap:15px;
+}
+
+.contain form .row .col .flex .inputBox{
+  margin-top: 5px;
+}
+
+.contain form .row .col .inputBox img{
+  height: 34px;
+  margin-top: 5px;
+  filter: drop-shadow(0 0 1px #000);
+}
+
+.contain form .submit-btn{
+  border-radius: .5em;
+  outline: none; border:none;
+  width: 100%;
+  padding:12px;
+  font-size: 17px;
+  background: var(--green);
+  color:#fff;
+  margin-top: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+}
+
+.contain form .submit-btn:hover{
+  color: var(--green);
+  background-color: var(--white);
+  box-shadow: 0px 0px 0px 1px var(--green) inset;
+  transition: all 0.25s ease-in;
+}
