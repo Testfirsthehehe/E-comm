@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header', {title: 'Product Details' , state: 'productDetails' }); %>
+  <body>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'productDetails'}); %> 
+    <!-- Product Details -->
+    <section class="section product-detail">
+      <div class="details container">
+        <div class="left image-container">
+          <div class="main">
+            <img src="/images/<%= data.image %>" id="zoom" alt="" />
+          </div>
+        </div>
+        <div class="right">
+          <br>
+          
+          <h1 class="name"><%= data.name %></h1>
+          <div class="price">Price  : IDR <%= data.price %></div><br>
+          <form class="form">
+            <label for="size">Size :</label>
+            <select id="sizes" name="sizelist" form="sizeform">
+              <option value="0">S ( 98 cm X 20 cm X 98 cm X 68 cm )</option>
+              <option value="1">M ( 100 cm X 21 cm X 100 cm X 70 cm )</option>
+              <option value="2">L ( 104 cm X 22 cm X 104 cm X 72 cm )</option>
+            </select><br><br>
+            <div class="stock">Stock : <%= data.variety[0].stock %></div><br>
+            <a class="addCart" onclick= "return addToCart
+            ('<%= data._id %>','<%= data.name %>','<%= data.price %>','<%= data.image %>')">
+            <i class="bx bx-cart"></i> Add To Cart</a><br><br>
+          </form>
+            <h3>Product Details</h3>
+          <p class="description">
+            <%= data.description %>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <%- include('../layouts/footer', {state: 'productDetails'}); %>
+  </body>
+</html>

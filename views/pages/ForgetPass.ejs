@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header.ejs', {title: 'Forget Password' , state: 'forgetpass' }); %>
+  <body>
+    <%- include('../layouts/navbar.ejs', {types: 'v2', state: 'forgetpass'}); %> 
+    <div class="container" >
+      <div class="ForgetPass-form">
+        <form action="" >
+          <div id="forgetpass" style="text-align:center ;">
+            <h1 class="card-header text-white" style="text-align: center;">Forgot Password</h1>
+                 
+            <div class="text" style="text-align: left; color: black;">
+              <p>Enter your email to receive a link to reset your password.</p>
+            </div><br>
+            <div class="forgettgif" style="text-align: center;">
+              <img src="https://media.giphy.com/media/IhZjlTBthiElq4Pf3W/giphy.gif" class="forgetttgif">
+            </div>
+            <label for="email"><i class="bx bx-envelope"></i> <b>Email</b></label><br><br>
+              <input type="text" placeholder="Email Address" id="email" class="email-password" required /><br>
+          </div>     
+          <div class="ForgetButtons">
+            <button type="button" onclick="location.href = 'ResetPass';" value="forgetpass" id="ForgetpassButton">Send</button>
+          </div><br>
+          <p>Return to login ? <a href="login">click here</a></p>
+          
+        </form>
+      </div>
+    </div>
+    <%- include('../layouts/footer.ejs', {state: 'forgetpass'}); %>
+  </body>
+</html>

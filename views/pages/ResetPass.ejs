@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../layouts/header', {title: 'Reset Password' , state: 'resetpass' }); %>
+  <body>
+    <%- include('../layouts/navbar', {types: 'v2', state: 'resetpass'}); %>
+
+    <div class="container" >
+        <div class="ResetPass-form">
+            <form action="" >
+                <div id=resetpass" style="text-align:center ;">
+                    <h1 class="card-header text-white" style="text-align: center;">Reset Password</h1>
+                   
+                    <div class="text" style="text-align: left; color: black;">
+                        <p>Please Enter a new password to change the current one.</p>
+                    </div><br>
+                    <div class="resettgif" style="text-align: center;">
+                        <img src="https://media.giphy.com/media/fZn0HdGIe1FjpPqUAM/giphy.gif" class="resetttgif">
+                    </div>
+                    <label for="password"><i class="bx bx-lock-alt"></i> <b>Password</b></label><br><br>
+                    <input type="password" placeholder="Current Password" id="password" class="email-password" required /><br>
+                    <input type="password" placeholder="New Password" id="password" class="email-password" required /><br>
+                </div>     
+                <div class="ForgetButtons">
+                    <button type="button" onclick="location.href = 'ResetPass-verification';" value="resetpass" id="resetpassButton">Reset</button>
+                </div><br>
+                <p>Return to login ? <a href="login" >here</a>.</p>
+            </form>
+        </div>
+    </div>
+      <%- include('../layouts/footer', {state: 'resetpass'}); %>
+    </body>
+  </html>
